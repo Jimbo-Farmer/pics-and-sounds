@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import './styles/style.scss';
+import Card from './components/Card';
+import animals from './resources/animals/Animals';
+import {Howl, Howler} from 'howler';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+class App extends Component {
+  SoundPlay = (src: string) => {
+    const sound = new Howl({src})
+    sound.play();
+  }
+
+  RenderCards = () => {
+    const playSound  = (sound : string) => {
+      return () => {
+        this.SoundPlay(sound)
+      }
+    }
+    return animals.map((item, index) => {
+      return (
+        <Card key={index} image={item.image} altText= {item.name} handleClick = {playSound(item.sound)} />
+      );
+    })
+  }
+
+  render() {
+    Howler.volume(1.0);
+    return <div className='App'>
+      {this.RenderCards()}
+    </div>;
+    
+  }
+} 
 
 export default App;
