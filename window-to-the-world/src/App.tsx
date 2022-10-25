@@ -46,7 +46,7 @@ function App() {
   Howler.volume(1.0);
   const handleImageClick  = (sound : string) => { 
     if(!expanded){
-      setTimeout(()=>{SoundPlay(sound)}, 400); //slight delay to give image time to expand
+      setTimeout(()=>{SoundPlay(sound)}, 200); //slight delay to give image time to expand
     }
     setExpanded(!expanded);
   }
