@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 interface Props {
   image: string;
@@ -7,9 +7,8 @@ interface Props {
 }
 
 export default function Card({image, altText, handleClick}: Props) {
-  const [big, setBig] = useState(false);
   return(
-    <div onClick={()=> {handleClick(); setBig(!big)}} className={big ? 'card card-expanded' : 'card'}>
+    <div onClick={()=> {handleClick()}} className='card'>
       <img src={image} alt={altText} />
     </div>
   )

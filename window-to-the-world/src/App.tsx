@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import './styles/style.scss';
-import Card from './components/Card';
-import animals from './resources/animals/Animals';
 import {Howl, Howler} from 'howler';
+import animals from './resources/animals/Animals';
+import Modal from './components/Modal';
+import Card from './components/Card';
 
 function App() {
   interface CardItem {
@@ -11,29 +12,26 @@ function App() {
     sound: string;
   }
 
-  const [expanded, setExpanded] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
-  const [modalImage, setModalImage] = useState('');
-  const [modalName, setModalName] = useState('');
+  const [modalItem, setModalItem] = useState({name:'', image:'', sound:''});
   const SoundPlay = (src: string) => {
     const sound = new Howl({src})
     sound.play();
   }
   Howler.volume(1.0);
   const handleImageClick  = (item : CardItem) => { 
-    if(!expanded){
-      setTimeout(()=>{SoundPlay(item.sound)}, 200); //slight delay to give image time to expand
+    if(!modalOpen){
+      setTimeout(()=>{SoundPlay(item.sound)}, 200); // Slight delay to give image time to expand.
     }
-    setExpanded(!expanded);
-    setModalOpen(!modalOpen);
-    setModalName(item.name);
-    setModalImage(item.image);
+    if(window.document.body.scrollWidth < 1000){
+      setModalOpen(!modalOpen); // Disable modal on larger screens. 
+    }
+    setModalItem(item);
   }
+
   return(
     <div className='card-container'>
-      <div onClick={()=>{setModalOpen(!modalOpen); setExpanded(!expanded)}} className={modalOpen ? 'modal modal-open' : 'modal'}>
-        <img src={modalImage} alt={modalName} />
-      </div>
+      <Modal item={modalItem} open={modalOpen} handleClick={()=>{setModalOpen(!modalOpen)}} />
       {animals.map((item, index) => {
         return (
           <Card key={index} image={item.image} altText= {item.name} handleClick = {()=>{handleImageClick(item)}} />
