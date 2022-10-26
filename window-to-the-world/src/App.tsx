@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { HelmetProvider , Helmet } from 'react-helmet-async';
 import './styles/style.scss';
 import {Howl, Howler} from 'howler';
 import Modal from './components/Modal';
@@ -29,7 +29,7 @@ function App() {
     <HelmetProvider>
       <Helmet>
         <title>See and Hear</title>
-        <meta name='description' content='A simple picture and sound app for children' />
+        <meta name="description" content="A simple picture and sound app for children" />
       </Helmet>
       <div className='page-container'>
         <div className={menuOpen ? 'menu-icon menu-icon-open' : 'menu-icon'} onClick={()=>{setMenuOpen(!menuOpen)}}><span></span><span></span><span></span></div> 
