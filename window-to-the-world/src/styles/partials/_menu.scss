@@ -47,7 +47,7 @@
 }
 
 .menu {
-  position: absolute;
+  position: fixed;
   z-index: 4;
   top: -300px;
   transition: all 0.2s linear;
