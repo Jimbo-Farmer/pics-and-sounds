@@ -8,4 +8,9 @@ The children she works with typically do not have a very long attention span, so
 
 The screen will display several images at once to increase intrigue and visual stimulation. Clicking on an image will cause it to expand to fill the screen and play the sound clip. Clicking again will shrink the image back to original size.
 
+## Dependencies
+
+The site is built with React with Typescript
+Sass is used for styling
+Howler is used for the sounds
 
