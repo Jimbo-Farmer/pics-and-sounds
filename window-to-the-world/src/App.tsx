@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import './styles/style.scss';
 import {Howl, Howler} from 'howler';
-import animals from './resources/animals/Animals';
 import Modal from './components/Modal';
 import Card from './components/Card';
 import allCategories from './resources/resourcesMaster';
@@ -26,26 +26,32 @@ function App() {
   }
 
   return(
-    <div className='page-container'>
-      <div className={menuOpen ? 'menu-icon menu-icon-open' : 'menu-icon'} onClick={()=>{setMenuOpen(!menuOpen)}}><span></span><span></span><span></span></div> 
-      <div className={menuOpen ? 'menu menu-open' : 'menu'}>
-        <ul>
-        {allCategories.map((category, index) => {
-          return(
-            <li key={category.name} onClick={()=>{setCategory(allCategories[index].array); setMenuOpen(false)}}>{category.name}</li>
-          )
-        })}       
-        </ul>
+    <HelmetProvider>
+      <Helmet>
+        <title>See and Hear</title>
+        <meta name='description' content='A simple picture and sound app for children' />
+      </Helmet>
+      <div className='page-container'>
+        <div className={menuOpen ? 'menu-icon menu-icon-open' : 'menu-icon'} onClick={()=>{setMenuOpen(!menuOpen)}}><span></span><span></span><span></span></div> 
+        <div className={menuOpen ? 'menu menu-open' : 'menu'}>
+          <ul>
+          {allCategories.map((category, index) => {
+            return(
+              <li key={category.name} onClick={()=>{setCategory(allCategories[index].array); setMenuOpen(false)}}>{category.name}</li>
+            )
+          })}       
+          </ul>
+        </div>
+        <div className='card-container'>
+          <Modal item={modalItem} open={modalOpen} handleClick={()=>{setModalOpen(!modalOpen)}} />
+          {category.map((item, index) => {
+            return (
+              <Card key={index} image={item.image} altText= {item.name} handleClick = {()=>{handleImageClick(item)}} />
+            );
+          })}
+        </div>
       </div>
-      <div className='card-container'>
-        <Modal item={modalItem} open={modalOpen} handleClick={()=>{setModalOpen(!modalOpen)}} />
-        {category.map((item, index) => {
-          return (
-            <Card key={index} image={item.image} altText= {item.name} handleClick = {()=>{handleImageClick(item)}} />
-          );
-        })}
-      </div>
-    </div>
+    </HelmetProvider>
   )
 } 
 
