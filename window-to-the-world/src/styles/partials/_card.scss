@@ -1,9 +1,11 @@
 .card-container {
-  max-width: 1000px;
-  margin: 0 auto;
+  background-color: #191780;
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  @media (min-width: 900px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 
