@@ -36,7 +36,6 @@
       transform: rotate(32deg);
     }
     &:nth-child(2){
-      
       opacity: 0;
     }
     &:nth-child(3){
@@ -69,6 +68,7 @@
     border: 1px solid white;
     border-radius: 5px;
     text-align: center;
+    text-transform: capitalize;
     &:hover {
       background-color: #191780;
       cursor: pointer;

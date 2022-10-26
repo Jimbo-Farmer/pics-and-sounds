@@ -12,13 +12,9 @@ import CockerelSound from './sounds/cockerel.mp3';
 import CowSound from './sounds/cow.mp3';
 import ChickSound from './sounds/chick.mp3';
 
-interface CardInput {
-  name: string;
-  image: string;
-  sound: string;
-}
+import {CardItem} from '../resourcesMaster'
 
-const animals: CardInput[] = [
+const animals: CardItem[] = [
   {name: 'cat', image: CatImage, sound: CatSound},
   {name: 'dog', image: DogImage, sound: DogSound},
   {name: 'donkey', image: DonkeyImage, sound: DonkeySound},
