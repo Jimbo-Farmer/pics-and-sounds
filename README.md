@@ -11,6 +11,8 @@ The screen will display several images at once to increase intrigue and visual s
 ## Dependencies
 
 The site is built with React with Typescript
+
 Sass is used for styling
+
 Howler is used for the sounds
 
