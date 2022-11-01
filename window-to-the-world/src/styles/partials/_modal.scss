@@ -7,10 +7,12 @@
   background-color: black;
   transition: all 0.3s ease-in;
   img {
-    height: 0;
+    width: 0;
   }
   @media (min-width: 1000px) {
     position: absolute;
+    width: unset;
+    height: 0;
   }
 }
 
@@ -24,6 +26,9 @@
   max-height: 100%;
   text-align: center;
   img {
-    height: 100%;  
+    width: 100%; 
+    @media (min-width: 1000px){
+      height: 100%;
+    } 
   } 
 }
