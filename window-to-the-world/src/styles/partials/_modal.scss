@@ -11,8 +11,10 @@
   }
   @media (min-width: 1000px) {
     position: absolute;
-    width: unset;
-    height: 0;
+    img {
+      width: unset;
+      height: 0;
+    }
   }
 }
 
@@ -28,6 +30,7 @@
   img {
     width: 100%; 
     @media (min-width: 1000px){
+      width: unset;
       height: 100%;
     } 
   } 
