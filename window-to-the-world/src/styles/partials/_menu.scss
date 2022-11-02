@@ -70,6 +70,7 @@
     border-radius: 5px;
     text-align: center;
     text-transform: capitalize;
+    filter: drop-shadow(#FFF 1px 1px 0px);
     &:hover {
       background-color: #191780;
       cursor: pointer;

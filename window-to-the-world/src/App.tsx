@@ -37,7 +37,7 @@ function App() {
           <ul>
           {allCategories.map((category, index) => {
             return(
-              <li key={category.name} onClick={()=>{setCategory(allCategories[index].array); setMenuOpen(false)}}>{category.name}</li>
+              <li key={category.name} onClick={()=>{setCategory(allCategories[index].array); setMenuOpen(false)}}><img src={category.icon} alt={category.name} /></li>
             )
           })}       
           </ul>

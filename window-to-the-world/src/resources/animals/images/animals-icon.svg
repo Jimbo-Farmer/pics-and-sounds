@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="38" height="30.712" viewBox="0 0 38 30.712">
+  <g id="Group_5" data-name="Group 5" transform="translate(-110 -1622)">
+    <path id="Path_5" data-name="Path 5" d="M595.622,1646a3.947,3.947,0,0,0,2.206,6c2.783,1,7.449-1.33,9.276-2a9.408,9.408,0,0,1,5.566,0c1.6.452,3.8,1.511,5.952,2s5.614-.283,7.035-2,.487-4.656-1.035-6-5.246-2.068-7-3-2.538-2.955-4.546-4-3.71-1.276-6.454,0-3.317,3.689-5.084,5S597.067,1643.921,595.622,1646Z" transform="translate(-481.622)" fill="#0292ff" stroke="#0292ff" stroke-linejoin="round" stroke-width="1"/>
+    <g id="Ellipse_3" data-name="Ellipse 3" transform="translate(110 1628)" fill="#0292ff" stroke="#0292ff" stroke-width="1">
+      <ellipse cx="4" cy="6" rx="4" ry="6" stroke="none"/>
+      <ellipse cx="4" cy="6" rx="3.5" ry="5.5" fill="none"/>
+    </g>
+    <g id="Ellipse_4" data-name="Ellipse 4" transform="translate(120 1622)" fill="#0292ff" stroke="#0292ff" stroke-width="1">
+      <ellipse cx="4" cy="6" rx="4" ry="6" stroke="none"/>
+      <ellipse cx="4" cy="6" rx="3.5" ry="5.5" fill="none"/>
+    </g>
+    <g id="Ellipse_5" data-name="Ellipse 5" transform="translate(130 1624)" fill="#0292ff" stroke="#0292ff" stroke-width="1">
+      <ellipse cx="4" cy="6" rx="4" ry="6" stroke="none"/>
+      <ellipse cx="4" cy="6" rx="3.5" ry="5.5" fill="none"/>
+    </g>
+    <g id="Ellipse_6" data-name="Ellipse 6" transform="translate(140 1630)" fill="#0292ff" stroke="#0292ff" stroke-width="1">
+      <ellipse cx="4" cy="6" rx="4" ry="6" stroke="none"/>
+      <ellipse cx="4" cy="6" rx="3.5" ry="5.5" fill="none"/>
+    </g>
+  </g>
+</svg>
